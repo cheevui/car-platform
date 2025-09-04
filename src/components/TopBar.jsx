@@ -22,7 +22,7 @@ export default function TopBar() {
         <>
             <Navbar expand="lg" className="pe-3 bg-body-secondary">
                 <Container>
-                    <Navbar.Brand href="/main" className="fw-bold ms-2">Carplace</Navbar.Brand>
+                    <Navbar.Brand href="/" className="fw-bold ms-2">Carplace</Navbar.Brand>
                     {currentUser &&
                         <>
 
