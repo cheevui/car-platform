@@ -5,7 +5,7 @@ import axios from "axios";
 
 
 export function AuthProvider({ children }) {
-    const url = "https://e537c4fe-23e3-4200-94e3-357b315eb85e-00-2rsf8r76hp3lc.pike.replit.dev";
+    const url = "https://car-platform-api.vercel.app";
     const [currentUser, setCurrentUser] = useState(null);
     const [currentUserInfo, setCurrentUserInfo] = useState(null);
     const [loading, setLoading] = useState(true);
