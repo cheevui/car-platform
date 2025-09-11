@@ -1,16 +1,11 @@
-import axios from "axios";
-import { useContext, useEffect, useState } from "react"
+import { useContext } from "react"
 import { AuthContext } from "../AuthContext";
-import { Button, Card, Col, Row, Spinner } from "react-bootstrap";
+import { Card, Spinner } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 
 function CarCard({ car }) {
     const navigate = useNavigate();
     const { currentUser } = useContext(AuthContext);
-    const display1 = `Brand: ${car.brand} Model: ${car.model}`
-    const display2 = `Year: ${car.color} Color: ${car.year}`
-    const display3 = `Mileage: ${car.mileage} (${car.conditions})`
-
 
     return (
         <Card

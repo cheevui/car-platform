@@ -7,7 +7,6 @@ import { deleteObject, getDownloadURL, getMetadata, ref, uploadBytes } from "fir
 import { storage } from "../firebase";
 
 
-
 export default function CarlistSinglePost() {
     const { uid, id } = useParams();
     const { url } = useContext(AuthContext);
@@ -68,7 +67,6 @@ export default function CarlistSinglePost() {
 
     const fetchSingleCarlist = useCallback(async () => {
         const response = await axios.get(`${url}/carlist/${uid}/${id}`);
-        console.log(response);
         setCarDetail(response.data.rows[0]);
 
     }, [uid, id])
@@ -147,7 +145,6 @@ export default function CarlistSinglePost() {
         try {
             await axios.put(`${url}/carlist/car_image/${uid}/${id}`, { image });
             try {
-                // Remove image from firebase
                 const firebaseImageExist = await getMetadata(imageRef);
                 console.log(firebaseImageExist);
                 if (firebaseImageExist) {
@@ -209,10 +206,6 @@ export default function CarlistSinglePost() {
         fetchFavourite();
     }, [])
 
-    useEffect(() => {
-        console.log(favourite);
-    }, [favourite])
-
     return (
         <>
             <Container className="my-4">
@@ -252,8 +245,6 @@ export default function CarlistSinglePost() {
                         <div className="mt-3">
                             <Button
                                 variant="danger"
-                                // style={{ width: "3rem" }}
-                                // onClick={handleShowEditModal}
                                 disabled
                             >
                                 <i

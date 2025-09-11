@@ -1,7 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { Button, Col, Container, Form, Modal, Row } from "react-bootstrap";
 import { AuthContext } from "../AuthContext";
-import SideBar from "../components/SideBar";
 import { deleteObject, getDownloadURL, ref, uploadBytes } from "firebase/storage";
 import { storage } from "../firebase";
 import axios from "axios";

@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import { Button, Col, Container, Form, Image, Modal, Row } from "react-bootstrap";
+import { Button, Col, Container, Form, Image, Row } from "react-bootstrap";
 import { AuthContext } from "../AuthContext";
 import { storage } from "../firebase";
 import { deleteObject, getDownloadURL, ref, uploadBytes } from "firebase/storage";

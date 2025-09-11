@@ -27,7 +27,6 @@ export default function SignUp() {
             );
 
             const uid = res.user.uid;
-            console.log(res);
 
             try {
                 await axios.post(`${url}/user`, { id: uid, email, first_name: firstName, last_name: lastName, dob, gender });
@@ -46,8 +45,6 @@ export default function SignUp() {
             } else {
                 console.error(authError);
             }
-            // console.error("Firebase authentication failed:", authError);
-            // alert("Registration failed. Please check your details and try again.");
         }
     };
 

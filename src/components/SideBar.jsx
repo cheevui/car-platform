@@ -1,9 +1,6 @@
 import { Col } from "react-bootstrap";
 
-
-
 export default function SideBar({ currentUser }) {
-
 
     return (
         <>

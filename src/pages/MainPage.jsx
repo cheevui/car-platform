@@ -1,9 +1,7 @@
-import { useContext } from "react";
 import { Col, Container, Image, Row } from "react-bootstrap";
 
 
 export default function MainPage() {
-
 
     return (
         <>

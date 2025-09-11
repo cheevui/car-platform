@@ -1,11 +1,8 @@
 import axios from "axios";
 import { useCallback, useContext, useEffect, useState } from "react";
-import { Button, Carousel, Col, Container, Form, Image, InputGroup, Modal, Row, Spinner } from "react-bootstrap";
-import { useNavigate, useParams } from "react-router-dom"
+import { Button, Carousel, Col, Container, Form, Image, InputGroup, Modal, Row } from "react-bootstrap";
+import { useParams } from "react-router-dom"
 import { AuthContext } from "../AuthContext";
-import { deleteObject, getDownloadURL, getMetadata, ref, uploadBytes } from "firebase/storage";
-import { storage } from "../firebase";
-
 
 
 export default function SingleCarlist() {
@@ -108,7 +105,6 @@ export default function SingleCarlist() {
                             >
                                 {carDetail.image_urls.map((image) => (
                                     <Carousel.Item
-                                        // style={{ height: "25rm" }}
                                         key={image}
                                     >
                                         <div

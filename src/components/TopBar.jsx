@@ -4,8 +4,6 @@ import { Button, Container, Nav, Navbar } from "react-bootstrap";
 import { Outlet, useNavigate } from "react-router-dom";
 import { AuthContext } from "../AuthContext";
 
-
-
 export default function TopBar() {
     const auth = getAuth();
     const navigate = useNavigate();

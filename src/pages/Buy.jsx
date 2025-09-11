@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import { Button, Card, Col, Container, Row, Spinner } from "react-bootstrap";
+import { Card, Col, Container, Row, Spinner } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../AuthContext";
 import axios from "axios";
@@ -112,11 +112,6 @@ export default function Buy() {
     useEffect(() => {
         fetchUsersPostedCarlist();
     }, []);
-
-    // useEffect(() => {
-    //     console.log(carlist);
-    //     console.log(currentUser)
-    // }, [carlist])
 
     return (
         <>

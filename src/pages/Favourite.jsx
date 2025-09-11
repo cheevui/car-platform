@@ -1,9 +1,8 @@
 import axios from "axios";
 import { useContext, useEffect, useState } from "react";
-import { Button, Card, Col, Container, Row } from "react-bootstrap";
+import { Card, Col, Container, Row } from "react-bootstrap";
 import { AuthContext } from "../AuthContext";
 import { useNavigate, useParams } from "react-router-dom";
-
 
 
 function FavouriteCard({ favourite, clickFavourite }) {
