@@ -9,7 +9,6 @@ export default function TopBar() {
     const navigate = useNavigate();
     const { setCurrentUser, currentUser } = useContext(AuthContext);
 
-
     const handleLogout = () => {
         auth.signOut();
         setCurrentUser(null);
