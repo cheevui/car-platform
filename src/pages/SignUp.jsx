@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 
 export default function SignUp() {
-    const url = "https://e537c4fe-23e3-4200-94e3-357b315eb85e-00-2rsf8r76hp3lc.pike.replit.dev";
+    const url = "https://car-platform-api.vercel.app";
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [firstName, setFirstName] = useState("");
