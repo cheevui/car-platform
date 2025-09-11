@@ -3,7 +3,6 @@ import { useContext, useEffect, useState } from "react";
 import { Button, Col, Container, Form, Image, Row } from "react-bootstrap";
 import { auth, provider } from "../firebase";
 import axios from "axios";
-import { AuthProvider } from "../components/AuthProvider";
 import { AuthContext } from "../AuthContext";
 import { useNavigate } from "react-router-dom";
 

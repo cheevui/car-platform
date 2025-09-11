@@ -27,10 +27,11 @@ export default function SignUp() {
             );
 
             const uid = res.user.uid;
+            console.log(res);
 
             try {
                 await axios.post(`${url}/user`, { id: uid, email, first_name: firstName, last_name: lastName, dob, gender });
-                alert("Registration complete, Please proceed to login.")
+                alert("Registration complete, You may proceed to sell or buy a car.")
                 navigate("/");
             } catch (apiError) {
                 await res.user.delete();
@@ -38,8 +39,15 @@ export default function SignUp() {
                 alert("Registration failed, Please try again");
             }
         } catch (authError) {
-            console.error("Firebase authentication failed:", authError);
-            alert("Registration failed. Please check your details and try again.");
+            console.error(authError);
+            if (authError.code === "auth/email-already-in-use") {
+                console.error("This email is already registered!");
+                alert("This email is already registered!");
+            } else {
+                console.error(authError);
+            }
+            // console.error("Firebase authentication failed:", authError);
+            // alert("Registration failed. Please check your details and try again.");
         }
     };
 
