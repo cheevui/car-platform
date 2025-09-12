@@ -15,7 +15,6 @@ export function AuthProvider({ children }) {
             try {
                 const response = await axios.get(`${url}/user/${currentUser.uid}`);
                 setCurrentUserInfo(response.data);
-                console.log("fetch Info run")
             } catch (userInfoError) {
                 setCurrentUserInfo(null);
                 console.error(userInfoError);
@@ -43,17 +42,6 @@ export function AuthProvider({ children }) {
 
         return result;
     }, [])
-
-    useEffect(() => {
-        if (currentUser & currentUserInfo) {
-            console.log(currentUser);
-            console.log(currentUserInfo);
-        } else {
-            console.log(currentUser);
-            console.log(currentUserInfo);
-        }
-    }, [currentUser, currentUserInfo]);
-
 
     const value = { url, currentUser, setCurrentUser, currentUserInfo, fetchCurrentUserInfo };
 

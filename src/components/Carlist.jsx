@@ -45,8 +45,6 @@ function CarCard({ car }) {
                     style={{
                         width: "100%",
                         height: "15rem",
-                        // backgroundColor: "#f8f9fa",// placeholder background
-                        // overflow: "hidden"
                     }}
                 >
                     <Card.Title
@@ -62,16 +60,13 @@ function CarCard({ car }) {
                     <Card.Text>
                         Brand: {car.brand} <br />
                         Model: {car.model} <br />
-                        {/* Color: {car.color} <br /> */}
                         Year: {car.year} <br />
-                        {/* Mileage: {car.mileage} <br />
-                        Conditions: {car.conditions} */}
                     </Card.Text>
                     <Card.Text
                         style={{
                             fontStyle: "italic",
                             display: "-webkit-box",
-                            WebkitLineClamp: 3,       // limit to 3 lines
+                            WebkitLineClamp: 3,
                             WebkitBoxOrient: "vertical",
                             overflow: "hidden",
                             textOverflow: "ellipsis",
